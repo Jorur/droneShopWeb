@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Shopping Cart - AirPixel</title>
+    <link rel="stylesheet" href="assetsCliente/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="assetsCliente/css/Articles-Cards-images.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>AirPixel</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                    <li class="nav-item d-lg-flex" style="margin-top: 5px;"><a class="nav-link active" href="shopping-cart.html"><span style="padding-right: 10px;padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cart" style="width: 20px;height: 20px;">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
+                                </svg></span></a></li>
+                </ul><a class="btn btn-primary shadow" role="button" href="login.html">Iniciar Sesion</a>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <h1 class="fw-bold text-primary">Informacion del Pedido</h1>
+            <section id="orderInformation" style="margin-left: 25px;">
+                <form>
+                    <p class="lead fw-bold" style="margin-bottom: 5px;">Nombre del Receptor</p><input class="form-control flex-shrink-0" type="text" style="width: 500px;height: 30px;">
+                    <p class="lead fw-bold" style="margin-bottom: 5px;">Numero de Telefono</p><input class="form-control flex-shrink-0" type="text" style="width: 500px;height: 30px;">
+                    <p class="lead fw-bold" style="margin-bottom: 5px;margin-top: 15px;">Direccion de Entrega</p><textarea class="form-control" id="orderAddress"></textarea>
+                </form>
+            </section>
+            <h1 class="fw-bold text-primary" style="margin-top: 25px;">Detalle del Pedido</h1>
+            <section id="orderDetail" style="margin-left: 25px;">
+                <div class="row">
+                    <div class="col-lg-5 d-lg-flex align-items-lg-end">
+                        <h4 class="fw-bold">Producto</h4>
+                    </div>
+                    <div class="col d-lg-flex align-items-lg-end">
+                        <h4 class="fw-bold">Precio Unitario</h4>
+                    </div>
+                    <div class="col text-center d-xxl-flex justify-content-xxl-center align-items-xxl-end">
+                        <h4 class="fw-bold">Cantidad</h4>
+                    </div>
+                    <div class="col d-xxl-flex justify-content-xxl-center">
+                        <h4 style="font-weight: bold;">Total por Producto</h4>
+                    </div>
+                </div>
+                <hr>
+                <section id="listProduct">
+                    <div class="row">
+                        <div class="col-xxl-5">
+                            <div class="row">
+                                <div class="col-xxl-3"><img class="img-fluid" src="assetsCliente/img/products/dronv1.jpg"></div>
+                                <div class="col-xxl-6 text-start">
+                                    <h5>Dron M380</h5>
+                                    <p class="text-muted">Capaz de volar 40 mts de alto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-xxl-flex align-items-xxl-center">
+                            <h5>$ 300.00</h5>
+                        </div>
+                        <div class="col-xxl-2 align-self-center">
+                            <div class="bg-light border rounded-pill d-flex justify-content-center align-items-center"><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">-</span><span class="fs-4 fw-semibold text-center text-dark num" style="width: 100%;">1</span><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">+</span></div>
+                        </div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center">
+                            <h5 class="fw-bold text-success">$ 300.00</h5>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-xxl-5">
+                            <div class="row">
+                                <div class="col-xxl-3"><img class="img-fluid" src="assetsCliente/img/products/dron6.jpg"></div>
+                                <div class="col-xxl-6 text-start">
+                                    <h5>Dron H650</h5>
+                                    <p class="text-muted">Capaz de volar 70 mts de alto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-xxl-flex align-items-xxl-center">
+                            <h5>$ 300.00</h5>
+                        </div>
+                        <div class="col-auto col-xxl-2 align-self-center">
+                            <div class="bg-light border rounded-pill d-flex justify-content-center align-items-center"><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">-</span><span class="fs-4 fw-semibold text-center text-dark num" style="width: 100%;">3</span><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">+</span></div>
+                        </div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center">
+                            <h5 class="fw-bold text-success">$ 900.00</h5>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-xxl-5">
+                            <div class="row">
+                                <div class="col-xxl-3"><img class="img-fluid" src="assetsCliente/img/products/dron5.jpg"></div>
+                                <div class="col-xxl-6 text-start">
+                                    <h5>Dron H890</h5>
+                                    <p class="text-muted">Capaz de volar 70 mts de alto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-xxl-flex align-items-xxl-center">
+                            <h5>$ 300.00</h5>
+                        </div>
+                        <div class="col-auto col-xxl-2 align-self-center">
+                            <div class="bg-light border rounded-pill d-flex justify-content-center align-items-center"><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">-</span><span class="fs-4 fw-semibold text-center text-dark num" style="width: 100%;">3</span><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">+</span></div>
+                        </div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center">
+                            <h5 class="fw-bold text-success">$ 900.00</h5>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-xxl-5">
+                            <div class="row">
+                                <div class="col-xxl-3"><img class="img-fluid" src="assetsCliente/img/products/dronv2.jpg"></div>
+                                <div class="col-xxl-6 text-start">
+                                    <h5>Dron LK89</h5>
+                                    <p class="text-muted">Capaz de volar 70 mts de alto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-xxl-flex align-items-xxl-center">
+                            <h5>$ 300.00</h5>
+                        </div>
+                        <div class="col-auto col-xxl-2 align-self-center">
+                            <div class="bg-light border rounded-pill d-flex justify-content-center align-items-center"><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">-</span><span class="fs-4 fw-semibold text-center text-dark num" style="width: 100%;">3</span><span class="fs-4 fw-semibold text-center text-dark" style="width: 100%;">+</span></div>
+                        </div>
+                        <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center">
+                            <h5 class="fw-bold text-success">$ 900.00</h5>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+                <div class="row justify-content-end">
+                    <div class="col-xxl-2 align-self-center">
+                        <h3 class="fw-bold">Total Pedido:</h3>
+                    </div>
+                    <div class="col-xxl-2 align-self-center">
+                        <h4 class="fw-bold text-center text-success">$ 3,000.00</h4>
+                    </div>
+                </div>
+            </section>
+            <h1 class="fw-bold text-primary">Metodo de Pago</h1>
+            <section id="payMethods" style="margin-left: 25px;">
+                <section id="payMethodHeaders">
+                    <div class="row">
+                        <div class="col-lg-5 d-lg-flex align-items-lg-end">
+                            <h4 class="fw-bold">Numero Tarjeta</h4>
+                        </div>
+                        <div class="col d-lg-flex align-items-lg-end">
+                            <h4 class="fw-bold">Fecha Vencimiento</h4>
+                        </div>
+                    </div>
+                    <hr>
+                </section>
+                <div class="row">
+                    <div class="col-xxl-5">
+                        <div class="row">
+                            <div class="col-xxl-3 align-self-center"><img class="img-fluid" src="assetsCliente/img/logos/visa-credit.png"></div>
+                            <div class="col-xxl-7 text-start align-self-center">
+                                <h5>4049 **** **** **90</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-xxl-flex align-items-xxl-center">
+                        <h5>12/24</h5>
+                    </div>
+                    <div class="col-xxl-2 d-xxl-flex align-self-center justify-content-xxl-center"><button class="btn btn-warning" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Editar<span style="margin-left: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pencil">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"></path>
+                                </svg></span></button></div>
+                    <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center"><button class="btn btn-info" type="button">Seleccionar<span style="margin-left: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-credit-card-fill">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"></path>
+                                </svg></span></button></div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-xxl-5">
+                        <div class="row">
+                            <div class="col-xxl-3 align-self-center"><img class="img-fluid" src="assetsCliente/img/logos/mastercard-credit.png"></div>
+                            <div class="col-xxl-7 text-start align-self-center">
+                                <h5>4049 **** **** **90</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-xxl-flex align-items-xxl-center">
+                        <h5>12/24</h5>
+                    </div>
+                    <div class="col-xxl-2 d-xxl-flex align-self-center justify-content-xxl-center"><button class="btn btn-warning" type="button" data-bs-target="#modal-1" data-bs-toggle="modal">Editar<span style="margin-left: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pencil">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"></path>
+                                </svg></span></button></div>
+                    <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center"><button class="btn btn-info" type="button">Seleccionar<span style="margin-left: 9px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-credit-card-fill">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"></path>
+                                </svg></span></button></div>
+                </div>
+            </section>
+            <section style="margin-top: 40px;">
+                <div class="row d-xxl-flex justify-content-xxl-center">
+                    <div class="col-xxl-2"><button class="btn btn-danger" type="button">Cancelar Orden</button></div>
+                    <div class="col-xxl-2"><button class="btn btn-success" type="button">Realizar Pedido</button></div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer class="bg-dark" style="margin-top: 30px;">
+        <div class="container py-4 py-lg-5">
+            <div class="row text-start justify-content-start">
+                <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
+                    <div class="fw-bold d-flex align-items-center mb-2"><span class="bs-icon-sm bs-icon-circle bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                                <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                                <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                            </svg></span><span>AirPixel</span></div>
+                    <p class="text-muted">Eleva tu perspectiva</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2024 AirPixel</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Editar Tarjeta</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="margin-bottom: 0px;">Nombre en la Tarjeta</p><input class="border rounded-pill" type="text">
+                    <p style="margin-bottom: 0px;margin-top: 15px;">Numero Tarjeta</p><input class="border rounded-pill" type="text">
+                    <p style="margin-bottom: 0px;margin-top: 15px;">Fecha Vencimiento</p><input class="border rounded-pill" type="text">
+                    <p style="margin-bottom: 0px;margin-top: 15px;">CVS</p><input class="border rounded-pill" type="text">
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button">Guardar</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assetsCliente/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assetsCliente/js/bold-and-dark.js"></script>
+</body>
+
+</html>
