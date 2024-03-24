@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - AirPixel</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark-Multi-Column-icons.css">
+</head>
+
+<body class="bg-primary" id="page-top">
+    <div id="wrapper">
+        <nav class="navbar bg-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark" style="background: #232855;">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                            <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                            <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                        </svg></div>
+                    <div class="sidebar-brand-text mx-3"><span>AirPixel</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link active" href="controlPanel.html"><svg></svg><span>Tablero de control</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html" style="margin: 0px;margin-top: initial;"><svg></svg><span>Gestionar Personal</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="stock.html" style="margin-top: auto;"><span style="margin-top: -28px;">Inventario</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button" data-bs-target="index.html"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div class="bg-body-secondary" id="content">
+                <nav class="navbar navbar-expand bg-secondary shadow mb-4 topbar static-top navbar-light">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"><span class="d-none d-lg-inline me-2 text-gray-600 small">Usuario</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-fill-gear" style="font-size: 28px;">
+                                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"></path>
+                                        </svg></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid bg-secondary">
+                    <div class="text-light d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-light mb-0">Tablero de control</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card bg-dark-subtle shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span style="color: rgb(166,71,224);">Ganancias del mes</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>$2200</span></div>
+                                        </div>
+                                        <div class="col-auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cash-coin bg-dark fa-2x text-gray-300">
+                                                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"></path>
+                                                <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"></path>
+                                                <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"></path>
+                                                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"></path>
+                                            </svg></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card bg-dark-subtle shadow border-start-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>Pedidos COMPLETADOS</span></div>
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span>5</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-clipboard-check bg-dark fa-2x text-gray-300">
+                                                <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
+                                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"></path>
+                                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"></path>
+                                            </svg></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card bg-dark-subtle shadow border-start-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span style="color: rgb(215,46,46);">Pedidos Pendientes</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>2</span></div>
+                                        </div>
+                                        <div class="col-auto"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="bg-dark fa-2x text-gray-300">
+                                                <g>
+                                                    <rect fill="none" height="24" width="24"></rect>
+                                                    <path d="M17,12c-2.76,0-5,2.24-5,5s2.24,5,5,5c2.76,0,5-2.24,5-5S19.76,12,17,12z M18.65,19.35l-2.15-2.15V14h1v2.79l1.85,1.85 L18.65,19.35z M18,3h-3.18C14.4,1.84,13.3,1,12,1S9.6,1.84,9.18,3H6C4.9,3,4,3.9,4,5v15c0,1.1,0.9,2,2,2h6.11 c-0.59-0.57-1.07-1.25-1.42-2H6V5h2v3h8V5h2v5.08c0.71,0.1,1.38,0.31,2,0.6V5C20,3.9,19.1,3,18,3z M12,5c-0.55,0-1-0.45-1-1 c0-0.55,0.45-1,1-1c0.55,0,1,0.45,1,1C13,4.55,12.55,5,12,5z"></path>
+                                                </g>
+                                            </svg></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"><button class="btn btn-primary" id="bestClientsButton" type="button" data-bs-target="#modalBestClients" data-bs-toggle="modal" style="background: rgb(168,78,223);margin-top: 9px;">Ver Mejores clientes</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 offset-xl-0">
+                            <div class="card bg-dark-subtle shadow mb-4">
+                                <div class="card-header bg-dark-subtle d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0">Ganancias del mes</h6><button class="btn btn-primary" type="button" data-bs-target="#modalReportEarnings" data-bs-toggle="modal">Generar reporte</button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Abr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Ago&quot;,&quot;Sept&quot;,&quot;Nov&quot;,&quot;Oct&quot;,&quot;Dic&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;2000&quot;,&quot;5000&quot;,&quot;7000&quot;,&quot;9000&quot;,&quot;12000&quot;,&quot;10000&quot;,&quot;13000&quot;,&quot;18000&quot;,&quot;19000&quot;,&quot;20000&quot;,&quot;21000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card bg-dark-subtle">
+                                <div class="card-header bg-dark-subtle">
+                                    <h6 class="fw-bold text-primary">Pedidos</h6><button class="btn btn-primary" type="button" style="margin-left: 370px;margin-top: -50px;" data-bs-target="#modalOrderStatus" data-bs-toggle="modal">Generar reporte</button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;backgroundColor&quot;:[&quot;rgb(198,30,30)&quot;,&quot;rgb(71,105,222)&quot;],&quot;borderColor&quot;:[&quot;rgba(78,115,223,0)&quot;,&quot;rgba(78,115,223,0)&quot;],&quot;data&quot;:[&quot;1000&quot;,&quot;2000&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}}"></canvas></div>
+                                    <div><span class="fs-6 fw-bold" style="margin: 143px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-fill fs-5" style="color: #4769de;">
+                                                <circle cx="8" cy="8" r="8"></circle>
+                                            </svg>Completados</span><span class="fs-6 fw-bold" style="margin: -119px;height: 0px;padding: 0px;width: 0px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-fill fs-5 text-start" style="color: #c61e1e;border-color: #c61e1e;">
+                                                <circle cx="8" cy="8" r="8"></circle>
+                                            </svg>Pendientes</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <h6 class="fw-bold text-primary bg-dark-subtle" style="margin: 1px;margin-bottom: 8px;margin-left: 0px;height: 48.2px;">Drones mas vendidos</h6><button class="btn btn-primary" type="button" data-bs-target="#modalBestSellingDrones" data-bs-toggle="modal" style="margin: 0px;margin-right: 0px;margin-left: 400px;margin-top: -91px;">Generar reporte</button>
+                            <div class="bg-dark-subtle" style="margin-top: -32px;"><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Dji Mavic Air 2&quot;,&quot;Parrot Anafi&quot;,&quot;Skydio 2&quot;,&quot;Autel Robotics Evo&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;1&quot;,&quot;3&quot;],&quot;stack&quot;:&quot;bestDroneChart&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;bold&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;stacked&quot;:true,&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgba(0, 0, 0, 0.1)&quot;,&quot;zeroLineColor&quot;:&quot;rgba(0, 0, 0, 0.1)&quot;},&quot;ticks&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}],&quot;yAxes&quot;:[{&quot;stacked&quot;:true,&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgba(0, 0, 0, 0.1)&quot;,&quot;zeroLineColor&quot;:&quot;rgba(0, 0, 0, 0.1)&quot;},&quot;ticks&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}}]}}}"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-dark-subtle sticky-footer" style="margin-bottom: 0px;margin-top: -1px;">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © AirPixel 2024</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalReportEarnings" style="width: 1000px;padding: 0px;text-align: justify;height: 1600px;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: rgb(30,40,116);">Reporte ganancias&nbsp;</h4><label class="form-label fs-5 fw-bold text-dark" style="font-weight: bold;margin: 23px;font-size: 21px;"><select id="monthLabelEarningReport" style="font-size: 15px;">
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select></label><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th id="idDrone">ID DRON</th>
+                                        <th id="quantityDrone">Cantidad</th>
+                                        <th id="unitCostDrone">Costo Unitario</th>
+                                        <th id="totalCostDrone">Costo total</th>
+                                        <th id="unitPriceDrone">Precio Unitario</th>
+                                        <th id="totalPriceDrone">Precio total</th>
+                                        <th id="earning">Ganancias</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>$100</td>
+                                        <td>$100</td>
+                                        <td>$300</td>
+                                        <td>$300</td>
+                                        <td>$200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>$200</td>
+                                        <td>$400</td>
+                                        <td>$400</td>
+                                        <td>$800</td>
+                                        <td>$400</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>$250</td>
+                                        <td>$250</td>
+                                        <td>$500</td>
+                                        <td>$500</td>
+                                        <td>$250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>3</td>
+                                        <td>$150</td>
+                                        <td>$450</td>
+                                        <td>$600</td>
+                                        <td>$1800</td>
+                                        <td>$1350</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;color: rgb(52,136,60);">Ganancias totales</td>
+                                        <td id="totalEarning" style="color: rgb(39,74,163);font-weight: bold;">$2200</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="closeReportEarningButton" type="button" data-bs-dismiss="modal">Salir</button><button class="btn btn-primary" id="generateReportEarningButton" type="button">Generar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalOrderStatus" style="width: 1000px;padding: 0px;text-align: justify;height: 1600px;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: rgb(30,40,116);">Reporte estado de pedidos</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th id="orderStatus">Estado</th>
+                                    <th id="idOrder">ID Pedido</th>
+                                    <th id="clientName">Cliente</th>
+                                    <th id="totalToPay">Direccion</th>
+                                    <th id="droneQuantity">Cantidad drones</th>
+                                    <th class="text-start" id="totalPrice">Total A Pagar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-bg-primary">Completado</td>
+                                    <td>P1</td>
+                                    <td>Mateo Fernandez</td>
+                                    <td>Calle Cochabamba, #2130</td>
+                                    <td>1</td>
+                                    <td>$300</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bg-primary">Completado</td>
+                                    <td>P2</td>
+                                    <td>Maryness Flores</td>
+                                    <td>Calle Suarez Arana, #4850</td>
+                                    <td>1</td>
+                                    <td>$400</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bg-primary">Completado</td>
+                                    <td>P3</td>
+                                    <td>Maryness Flores</td>
+                                    <td>Calle Suarez Arana, #4850</td>
+                                    <td>1</td>
+                                    <td>$400</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bg-primary">Completado</td>
+                                    <td>P4</td>
+                                    <td>Maryness Flores</td>
+                                    <td>Calle Suarez Arana, #4850</td>
+                                    <td>1</td>
+                                    <td>$500</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bg-primary">Completado</td>
+                                    <td>P5</td>
+                                    <td>Ricardo Asin</td>
+                                    <td>Calle Beni, #4890</td>
+                                    <td>1</td>
+                                    <td>$600</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bg-danger">Pendiente</td>
+                                    <td>P6</td>
+                                    <td>Alejandro Nina</td>
+                                    <td>Calle Seoane, #1580</td>
+                                    <td>1</td>
+                                    <td>$600</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-bg-danger">Pendiente</td>
+                                    <td>P7</td>
+                                    <td>Alejandro Nina</td>
+                                    <td>Calle Seoane, #1580</td>
+                                    <td>1</td>
+                                    <td>$600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="closeReportOrderButton" type="button" data-bs-dismiss="modal">Salir</button><button class="btn btn-primary" id="generateReportOrderButton" type="button">Generar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalBestSellingDrones" style="width: 1000px;padding: 0px;text-align: justify;height: 1600px;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: rgb(30,40,116);">Reporte drones mas vendidos</h4><label class="form-label" style="margin-left: 17px;margin-bottom: 0px;">Ordenar por&nbsp;<select>
+                            <option value="MasVendidos">Mas vendidos</option>
+                            <option value="MenosVendidos">Menos vendidos</option>
+                        </select></label><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th id="idDrone">ID Dron</th>
+                                    <th id="droneModel">Modelo</th>
+                                    <th id="quantitySold">Cantidad vendida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dji Mavic Air 2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Parrot Anafi</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Skydio 2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Autel Robotics Evo</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="closeReportBestSellingButton" type="button" data-bs-dismiss="modal">Salir</button><button class="btn btn-primary" id="generateReportBestSellingButton" type="button">Generar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalBestClients" style="width: 1000px;padding: 0px;text-align: justify;height: 1600px;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: rgb(30,40,116);">Reporte mejores clients&nbsp;</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th id="clientName">Nombre</th>
+                                    <th id="quantityDrone">Drones Comprados</th>
+                                    <th id="moneyInvested">Dinero Invertido</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maryness Flores</td>
+                                    <td>3</td>
+                                    <td>$1300</td>
+                                </tr>
+                                <tr>
+                                    <td>Alejandro Nina</td>
+                                    <td>2</td>
+                                    <td>$1200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="closeReportBestSellingButton-1" type="button" data-bs-dismiss="modal">Salir</button><button class="btn btn-primary" id="generateReportBestSellingButton-1" type="button">Generar</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

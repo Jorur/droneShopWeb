@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>workerPage</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark-Multi-Column-icons.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar bg-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark" style="background: #232855;">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                            <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+                            <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                        </svg></div>
+                    <div class="sidebar-brand-text mx-3"><span>AirPixel</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="controlPanel.html"><svg></svg><span>Tablero de control</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html" style="margin: 0px;margin-top: initial;"><svg></svg><span>Gestionar Personal</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="stock.html" style="margin-top: auto;"><span style="margin-top: -28px;">Inventario</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button" data-bs-target="index.html"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-secondary shadow mb-4 topbar static-top navbar-light">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"><span class="d-none d-lg-inline me-2 text-gray-600 small">Usuario</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-fill-gear" style="font-size: 28px;">
+                                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"></path>
+                                        </svg></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Productos</h3>
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 fw-bold" style="font-size: 26px;">Información de stock de productos</p><button class="btn btn-primary" type="button" style="margin-left: 900px;" data-bs-target="#addProductStockModal" data-bs-toggle="modal">Agregar producto</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 text-nowrap">
+                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><input type="search" value="Buscar Productos" name="searchProducts"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"></label></div>
+                                </div>
+                            </div>
+                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th id="salesManName">Modelo</th>
+                                            <th id="idSalesMan">ID</th>
+                                            <th id="commisionSalesMan">Costo Unitario</th>
+                                            <th id="commisionSalesMan-1">Cantidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Skydio 2</td>
+                                            <td>1</td>
+                                            <td>$200</td>
+                                            <td>100</td>
+                                            <td><button class="btn btn-primary" type="button" style="background: rgb(234,41,28);" data-bs-target="#removeProductModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-trash-fill">
+                                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"></path>
+                                                    </svg></button></td>
+                                            <td><button class="btn btn-primary" type="button" data-bs-target="#modifyProductStockModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path>
+                                                    </svg></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dji Mini 2</td>
+                                            <td>2</td>
+                                            <td>$300</td>
+                                            <td>150</td>
+                                            <td><button class="btn btn-primary" type="button" style="background: #ea291c;" data-bs-target="#removeProductModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-trash-fill">
+                                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"></path>
+                                                    </svg></button></td>
+                                            <td><button class="btn btn-primary" type="button" data-bs-target="#modifyProductStockModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path>
+                                                    </svg></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parrot Anafi</td>
+                                            <td>3</td>
+                                            <td>$400</td>
+                                            <td>80</td>
+                                            <td><button class="btn btn-primary" type="button" style="background: #ea291c;" data-bs-target="#removeProductModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-trash-fill">
+                                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"></path>
+                                                    </svg></button></td>
+                                            <td><button class="btn btn-primary" type="button" data-bs-target="#modifyProductStockModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path>
+                                                    </svg></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dji Mavic Air 2</td>
+                                            <td>4</td>
+                                            <td>$500</td>
+                                            <td>90</td>
+                                            <td><button class="btn btn-primary" type="button" style="background: #ea291c;" data-bs-target="#removeProductModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-trash-fill">
+                                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"></path>
+                                                    </svg></button></td>
+                                            <td><button class="btn btn-primary" type="button" data-bs-target="#modifyProductStockModal" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path>
+                                                    </svg></button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><strong>Modelo</strong></td>
+                                            <td><strong>ID</strong></td>
+                                            <td><strong>Costo Unitario</strong></td>
+                                            <td><strong>Cantidad</strong></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-xl-2">
+                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-dark-subtle sticky-footer" style="margin-bottom: 0px;margin-top: -1px;">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © AirPixel 2024</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="addProductStockModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: var(--bs-emphasis-color);font-weight: bold;">Agregar producto</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col"><span style="color: var(--bs-emphasis-color);font-weight: bold;">ID dron</span></div>
+                        <div class="col" style="margin-bottom: 14px;margin-left: 8px;margin-top: -2px;"><select>
+                                <option value="ID1">1</option>
+                                <option value="ID2" selected="">2</option>
+                                <option value="ID3">3</option>
+                                <option value="ID4">4</option>
+                            </select></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><span style="color: var(--bs-emphasis-color);font-weight: bold;">Modelo</span></div>
+                        <div class="col"><input type="text" id="addPhoneSalesMan" style="margin-bottom: 15px;margin-left: 1px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-weight: bold;color: var(--bs-emphasis-color);"><span>Costo Unitario</span></div>
+                        <div class="col"><input type="text" id="addCISalesMan-1" style="margin-bottom: 3px;margin-top: 7px;margin-right: 12px;margin-left: 1px;"></div>
+                    </div>
+                    <div class="row" style="margin-top: 11px;margin-left: -11px;">
+                        <div class="col"><span style="font-weight: bold;color: var(--bs-emphasis-color);">Stock</span></div>
+                        <div class="col"><input type="text" id="addCISalesMan" style="margin-left: 1px;margin-top: 4px;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="closeAddSalesManModalButton" type="button" data-bs-dismiss="modal">salir</button><button class="btn btn-primary" id="addSalesManButton" type="button" data-bs-target="#addProductSucess" data-bs-toggle="modal">agregar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modifyProductStockModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: var(--bs-emphasis-color);font-weight: bold;">Agregar producto</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col"><span style="color: var(--bs-emphasis-color);font-weight: bold;">ID dron</span></div>
+                        <div class="col" style="margin-bottom: 14px;margin-left: 8px;margin-top: -2px;"><select>
+                                <option value="ID1">1</option>
+                                <option value="ID2" selected="">2</option>
+                                <option value="ID3">3</option>
+                                <option value="ID4">4</option>
+                            </select></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><span style="color: var(--bs-emphasis-color);font-weight: bold;">Modelo</span></div>
+                        <div class="col"><input type="text" id="addPhoneSalesMan-1" style="margin-bottom: 15px;margin-left: 1px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-weight: bold;color: var(--bs-emphasis-color);"><span>Costo Unitario</span></div>
+                        <div class="col"><input type="text" id="addCISalesMan-2" style="margin-bottom: 3px;margin-top: 7px;margin-right: 12px;margin-left: 1px;"></div>
+                    </div>
+                    <div class="row" style="margin-top: 11px;margin-left: -11px;">
+                        <div class="col"><span style="font-weight: bold;color: var(--bs-emphasis-color);">Stock</span></div>
+                        <div class="col"><input type="text" id="addCISalesMan-3" style="margin-left: 1px;margin-top: 4px;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="closeAddSalesManModalButton-1" type="button" data-bs-dismiss="modal">salir</button><button class="btn btn-primary" id="modifyProductModal" type="button" data-bs-target="#modifyProductSucess" data-bs-toggle="modal">agregar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="removeProductModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p style="font-weight: bold;color: var(--bs-emphasis-color);font-size: 23px;">¿Estas seguro de que quieres eliminar la informacion de este producto?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" id="cancelRemoveSalesManButton" type="button" data-bs-dismiss="modal" style="background: rgb(245,247,255);">cancelar</button><button class="btn btn-primary" id="okRemoveSalesManButton" type="button" style="background: var(--bs-form-invalid-border-color);" data-bs-target="#removeProductSuccess" data-bs-toggle="modal">eliminar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="removeProductSuccess">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p style="font-weight: bold;font-size: 26px;color: var(--bs-emphasis-color);">Informacion de producto eliminada con exito!!!!!</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">OK</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modifyProductSucess">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p style="font-weight: bold;font-size: 26px;color: var(--bs-emphasis-color);">Informacion de producto modificada con exito!!!!!</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">OK</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="addProductSucess">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p style="font-weight: bold;font-size: 26px;color: var(--bs-emphasis-color);">Producto Agregado con exito!!!</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">OK</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
