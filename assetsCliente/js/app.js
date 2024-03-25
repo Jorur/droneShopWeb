@@ -80,7 +80,6 @@ function loginUser(e) {
     }
     loginUserData.username = inputUser.value;
     loginUserData.password = inputPass.value;
-    console.log(loginUserData);
     loginUserAsync(loginUserData).then(
         responseAuth => {
             if (responseAuth.status === 200) {
@@ -259,7 +258,7 @@ function validateData(e) {
 
 function saveNewData(e) {
     e.preventDefault();
-    getCredentials(e);
+    getCredentials();
         updateUserData(loggedUser, loginUserData).then(response => {
             if (response.status === 200) {
                 localStorage.setItem('user', JSON.stringify(loggedUser));
