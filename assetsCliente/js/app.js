@@ -75,6 +75,16 @@ function loginUser(e) {
                     });
                     window.location.href = 'index.html';
                 }
+
+                else{
+                    const alert = document.createElement('div');
+                    alert.classList.add('alert', 'alert-danger', 'text-center');
+                    alert.textContent = "Usuario o contraseña incorrectos";
+                    document.querySelector('#formLogin').appendChild(alert);
+                    setTimeout(() => {
+                        alert.remove();
+                    }, 5000);
+                }
             });
         }
     );
