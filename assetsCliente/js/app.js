@@ -28,17 +28,14 @@ const loggedUser = {
 eventListeners();
 
 function eventListeners() {
-    try {
+    if (btnLogin){
         btnLogin.addEventListener('click', loginUser);
-    } catch (error) {
-        console.error(error);
     }
     document.addEventListener('DOMContentLoaded', () => {
         validateLoggedUser();
         loadLoggedUserData();
     });
 }
-
 
 function loginUser(e) {
     e.preventDefault();
@@ -122,7 +119,6 @@ async function getUserData(data) {
     }
 }
 
-
 function validateLoggedUser() {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user !== null) {
@@ -157,6 +153,9 @@ function validateLoggedUser() {
 }
 
 function loadLoggedUserData() {
+    if (document.querySelector('#nameLogged') === null) {
+        return;
+    }
     const user = JSON.parse(localStorage.getItem('user'));
     console.log(user);
     if (user !== null) {
