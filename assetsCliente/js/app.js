@@ -7,6 +7,7 @@ const navList = document.querySelector('#navList');
 const navcol = document.querySelector('#navcol-1');
 
 const btnConfirmCredentials = document.querySelector('#btnConfirmCredentials');
+const saveBtn = document.querySelector('#saveButton');
 
 const loginUserData = {
     username: "",
@@ -53,6 +54,10 @@ function eventListeners() {
 
     if (btnConfirmCredentials) {
         btnConfirmCredentials.addEventListener('click', saveNewData);
+    }
+
+    if (saveBtn) {
+        saveBtn.addEventListener('click', validateData);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -192,9 +197,9 @@ function loadLoggedUserData() {
     }
 }
 
-function saveNewData(e) {
+function validateData(e) {
     e.preventDefault();
-    getCredentials(e);
+
     const user = JSON.parse(localStorage.getItem('user'));
 
     const editForm = document.querySelector('#formLogged');
@@ -239,6 +244,16 @@ function saveNewData(e) {
         loggedUser.phoneNumber = number.value;
         loggedUser.address = address.value;
         loggedUser.role = user.role;
+
+        // Show the modal
+        const dialogBoxElement = document.getElementById('dialogBox');
+        new bootstrap.Modal(dialogBoxElement).show();
+    }
+}
+
+function saveNewData(e) {
+    e.preventDefault();
+    getCredentials(e);
         updateUserData(loggedUser, loginUserData).then(response => {
             if (response.status === 200) {
                 localStorage.setItem('user', JSON.stringify(loggedUser));
@@ -260,7 +275,6 @@ function saveNewData(e) {
                 }, 2000);
             }
         });
-    }
 }
 
 function getCredentials() {
@@ -289,7 +303,6 @@ function getCredentials() {
             }
         }
     );
-
 }
 
 async function updateUserData(newData, oldData) {
