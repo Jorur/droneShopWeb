@@ -54,35 +54,38 @@ function loginUser(e) {
     console.log(loginUserData);
     loginUserAsync(loginUserData).then(
         responseAuth => {
-            getUserData(loginUserData).then(responseUserData => {
-                if (responseAuth.status === 200) {
-                    responseUserData.json().then(data => {
-                        loggedUser.id = data.id;
-                        loggedUser.fullName = data.fullName;
-                        loggedUser.username = data.username;
-                        loggedUser.mail = data.mail;
-                        loggedUser.password = data.password;
-                        loggedUser.gender = data.gender;
-                        loggedUser.birthDate = data.birthDate;
-                        loggedUser.phoneNumber = data.phoneNumber;
-                        loggedUser.role = data.role;
-                        loggedUser.address = data.address;
-                        localStorage.setItem('user', JSON.stringify(loggedUser));
-                        loadLoggedUserData();
-                    });
-                    window.location.href = 'index.html';
-                }
+            if (responseAuth.status === 200) {
+                getUserData(loginUserData).then(responseUserData => {
+                    if(responseUserData.status === 200){
+                        responseUserData.json().then(data => {
+                            loggedUser.id = data.id;
+                            loggedUser.fullName = data.fullName;
+                            loggedUser.username = data.username;
+                            loggedUser.mail = data.mail;
+                            loggedUser.password = data.password;
+                            loggedUser.gender = data.gender;
+                            loggedUser.birthDate = data.birthDate;
+                            loggedUser.phoneNumber = data.phoneNumber;
+                            loggedUser.role = data.role;
+                            loggedUser.address = data.address;
+                            localStorage.setItem('user', JSON.stringify(loggedUser));
+                            loadLoggedUserData();
 
-                else{
-                    const alert = document.createElement('div');
-                    alert.classList.add('alert', 'alert-danger', 'text-center');
-                    alert.textContent = "Usuario o contraseña incorrectos";
-                    document.querySelector('#formLogin').appendChild(alert);
-                    setTimeout(() => {
-                        alert.remove();
-                    }, 5000);
-                }
-            });
+                            window.location.href = 'index.html';
+                        });
+                    }
+                });
+            }
+            else
+            {
+                const alert = document.createElement('div');
+                alert.classList.add('alert', 'alert-danger', 'text-center');
+                alert.textContent = "Usuario o contraseña incorrectos";
+                document.querySelector('#formLogin').appendChild(alert);
+                setTimeout(() => {
+                    alert.remove();
+                }, 5000);
+            }
         }
     );
 }
