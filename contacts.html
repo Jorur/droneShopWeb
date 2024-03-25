@@ -38,13 +38,15 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-xl-4">
                     <div>
-                        <form class="p-3 p-xl-4" method="post">
-                            <div class="mb-3"><input class="form-control" type="text" id="nameLogged" name="name" placeholder="Nombre"></div>
-                            <div class="mb-3"><input class="form-control" type="email" id="emailLogged" name="email" placeholder="Email">
-                                <div class="mb-3"><input class="form-control" type="text" id="numberLogged" name="number" placeholder="Numero" style="margin-top: 16px;"></div>
-                            </div>
-                            <div class="mb-3"><textarea class="form-control" id="addressLogged" name="addressLogged" rows="6" placeholder="Direccion de Envio"></textarea></div>
-                            <div><button class="btn btn-primary shadow d-block w-100" type="submit">Guardar</button></div>
+                        <form id="formLogged" class="p-3 p-xl-4" method="post">
+                            <div class="mb-3"><label for="nameLogged">Nombre Completo</label><input class="form-control" type="text" id="nameLogged" name="name" placeholder="Nombre"></div>
+                            <div class="mb-3"><label for="usernameLogged">Nombre de Usuario</label><input class="form-control" type="text" id="usernameLogged" name="user" placeholder="Usuario"></div>
+                            <div class="mb-3"><label for="emailLogged">Email del Usuario</label><input class="form-control" type="email" id="emailLogged" name="email" placeholder="Email"></div>
+                            <div class="mb-3"><label for="genderLogged">Genero (M o F)</label><input class="form-control" type="text" id="genderLogged" name="genero" placeholder="Genero"></div>
+                            <div class="mb-3"><label for="birthDateLogged">Fecha de Nacimiento</label><input class="form-control" type="date" id="birthDateLogged" name="fechanacimiento" placeholder="Fecha de Nacimiento"></div>
+                            <div class="mb-3"><label for="numberLogged">Numero de Telefono</label><input class="form-control" type="tel" id="numberLogged" name="email" placeholder="Telefono"></div>
+                            <div class="mb-3"><label for="addressLogged">Direccion de Envio</label><textarea class="form-control" id="addressLogged" name="addressLogged" rows="6" placeholder="Direccion de Envio"></textarea></div>
+                            <div><button id="saveButton" class="btn btn-primary shadow d-block w-100" type="button" data-bs-target="#dialogBox" data-bs-toggle="modal">Guardar</button></div> <!--data-bs-target="#dialogBox" data-bs-toggle="modal"-->
                         </form>
                     </div>
                 </div>
@@ -68,6 +70,31 @@
             </div>
         </div>
     </footer>
+    <div id="dialogBox" class="modal fade" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div id="dialogForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ingrese sus credenciales</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="usernameDialog" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="usernameDialog">
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordDialog" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="passwordDialog">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnConfirmCredentials">Confirmar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assetsCliente/bootstrap/js/bootstrap.min.js"></script>
     <script src="assetsCliente/js/bold-and-dark.js"></script>
     <script src="assetsCliente/js/app.js"></script>
