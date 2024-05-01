@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Sign up - AirPixel</title>
+    <title>Contacts - AirPixel</title>
     <link rel="stylesheet" href="assetsCliente/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="assetsCliente/css/Articles-Cards-images.css">
@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul id="navList" class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html/#productslist">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#productslist">Productos</a></li>
                     <li class="nav-item d-lg-flex" style="margin-top: 5px;"><a class="nav-link" href="shopping-cart.html"><span style="padding-right: 10px;padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cart" style="width: 20px;height: 20px;">
                                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
                                 </svg></span></a></li>
@@ -29,33 +29,25 @@
     </nav>
     <section class="py-5">
         <div class="container py-5">
-            <div class="row mb-4 mb-lg-5">
+            <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">Registrarse</p>
-                    <h2 class="fw-bold">Bienvenido a AirPixel!!!</h2>
+                    <p class="fw-bold text-success mb-2">Gestion del perfil</p>
+                    <h2 class="fw-bold">Edita tu perfil</h2>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-xl-4">
-                    <div class="card">
-                        <div class="card-body text-center d-flex flex-column align-items-center">
-                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary shadow bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
-                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"></path>
-                                </svg></div>
-                            <form method="post">
-                                <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="Nombre Completo"></div>
-                                <div style="margin-bottom: 16px;"><input class="form-control" type="text" name="email" placeholder="Email"></div>
-                                <div style="margin-bottom: 16px;"><input class="form-control" type="text" name="username" placeholder="Nombre de Usuario"></div>
-                                <div style="margin-bottom: 16px;"><input class="form-control" type="text" name="password" placeholder="Contraseña"></div>
-                                <div style="margin-bottom: 16px;"><input class="form-control" type="text" name="telephoneNumber" placeholder="Numero de Telefono"></div>
-                                <div><select class="form-select" name="generoselect" style="margin-bottom: 15px;">
-                                        <option value="1" selected="">Masculino</option>
-                                        <option value="2">Femenino</option>
-                                    </select></div>
-                                <div class="mb-3"><button class="btn btn-primary shadow d-block w-100" type="submit">Registrarse</button></div>
-                                <p class="text-muted">Ya tienes una cuenta?&nbsp;<a class="link-success" href="login.html">Inicia Sesion</a></p>
-                            </form>
-                        </div>
+                    <div>
+                        <form id="formLogged" class="p-3 p-xl-4" method="post">
+                            <div class="mb-3"><label for="nameLogged">Nombre Completo</label><input class="form-control" type="text" id="nameLogged" name="name" placeholder="Nombre"></div>
+                            <div class="mb-3"><label for="usernameLogged">Nombre de Usuario</label><input class="form-control" type="text" id="usernameLogged" name="user" placeholder="Usuario"></div>
+                            <div class="mb-3"><label for="emailLogged">Email del Usuario</label><input class="form-control" type="email" id="emailLogged" name="email" placeholder="Email"></div>
+                            <div class="mb-3"><label for="genderLogged">Genero (M o F)</label><input class="form-control" type="text" id="genderLogged" name="genero" placeholder="Genero"></div>
+                            <div class="mb-3"><label for="birthDateLogged">Fecha de Nacimiento</label><input class="form-control" type="date" id="birthDateLogged" name="fechanacimiento" placeholder="Fecha de Nacimiento"></div>
+                            <div class="mb-3"><label for="numberLogged">Numero de Telefono</label><input class="form-control" type="tel" id="numberLogged" name="email" placeholder="Telefono"></div>
+                            <div class="mb-3"><label for="addressLogged">Direccion de Envio</label><textarea class="form-control" id="addressLogged" name="addressLogged" rows="6" placeholder="Direccion de Envio"></textarea></div>
+                            <div><button id="saveButton" class="btn btn-primary shadow d-block w-100" type="button">Guardar</button></div> <!--data-bs-target="#dialogBox" data-bs-toggle="modal"-->
+                        </form>
                     </div>
                 </div>
             </div>
@@ -78,6 +70,31 @@
             </div>
         </div>
     </footer>
+    <div id="dialogBox" class="modal fade" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div id="dialogForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ingrese sus credenciales</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="usernameDialog" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="usernameDialog">
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordDialog" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="passwordDialog">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnConfirmCredentials">Confirmar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assetsCliente/bootstrap/js/bootstrap.min.js"></script>
     <script src="assetsCliente/js/bold-and-dark.js"></script>
     <script src="assetsCliente/js/app.js"></script>
